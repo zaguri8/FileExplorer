@@ -1,0 +1,6 @@
+@FileExplorerBack_HostAddress = http://localhost:5271
+
+GET {{FileExplorerBack_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
