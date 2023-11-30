@@ -1,0 +1,22 @@
+<div class="gallery">
+    @for(file of explorerService.onlyFiles(); track file.path) {
+    <div>
+
+        @if(explorerService.IsImageFile(file)) {
+        <img class="image" src="{{file.data_url}}" width="100" height="100">
+        }
+        @else if(explorerService.IsPDFFile(file)) {
+            <object [data]="file.data_url | safe" type="application/pdf">
+                <iframe [src]="'https://docs.google.com/viewer?url={{image.url}}&embedded=true'| safe"></iframe>
+             </object>
+        }
+        @else {
+        <div class="image center" width="100" height="100">
+            Unsupported media type
+            <div>{{file.mimeType}}</div>
+        </div>
+        }
+        <div>{{file.name}}</div>
+    </div>
+    }
+</div>

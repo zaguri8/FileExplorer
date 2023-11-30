@@ -1,6 +1,5 @@
-<button (click)="dirBack()">..{{current_path}}</button>
-
-@if(image()) {
-  <img src={image()} width="200" height="200" />
-}
+<div class="app">
+  <explorer-menu></explorer-menu>
+  <file-gallery></file-gallery>
+</div>
 <router-outlet></router-outlet>

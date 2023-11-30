@@ -1,0 +1,5 @@
+.app {
+    height:100%;
+    display: grid;
+    grid-template-columns: minmax(250px, 30%) minmax(calc(100% - 250px),calc(100% - 250px))
+}

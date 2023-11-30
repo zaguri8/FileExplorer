@@ -1,0 +1,14 @@
+<div class="explorer-menu">
+    <button class="back-btn" (click)="explorerService.dirBack()">..{{explorerService.current_path}}</button>
+    <div class="rows">
+        @for(file of explorerService.directoryContent(); track file.path) {
+         @if(file.isDirectory)  {
+            <div class="menu-row" (click)="explorerService.openDirectory(file.path)">{{file.name}}</div>
+         }
+         @else {
+            <div class="menu-row">{{file.name}}</div>
+         }
+        }
+    </div>
+
+</div>
